@@ -1,3 +1,4 @@
 
 name: I got it
+on: workflow_dispatch
 
