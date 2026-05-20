@@ -1,4 +1,4 @@
-name: Hello Arjun
+name: Deploy HTML to S3
 
 on: workflow_dispatch
 
