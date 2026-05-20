@@ -6,9 +6,6 @@ jobs:
     steps:
       - name: First cycle
         run: echo "This first action"
-      - name: Second Cycle
-        run: |
-        echo " bla bla bla"
-        echo "la la la la la la"
+      
       
 
