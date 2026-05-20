@@ -1,11 +1,11 @@
-name: I got it
+name: Env Demo
 on: workflow_dispatch
 jobs:
-  working:
+  env-demo:
     runs-on: ubuntu-latest
     steps:
-      - name: First cycle
-        run: echo "This first action"
+      - name: Connecting to Env
+        run: echo "App is connecting to $APP_ENV"
       
       
 
