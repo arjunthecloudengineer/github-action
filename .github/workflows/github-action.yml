@@ -11,10 +11,10 @@ jobs:
     
     steps:
     
-      - name: Hello step
+      - name: First step
         run: echo "This is test for github action"
       
-      - name: Run a multi-line script
+      - name: Second Step
         run: |
-          echo "Welcome to GHA",
+          echo "this is for multi steps"
           echo "this is another line"
