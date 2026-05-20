@@ -1,10 +1,9 @@
-
 name: I got it
 on: workflow_dispatch
 jobs:
-  working hard:
+  working:
     runs-on: ubuntu-latest
     steps:
-      - name:First Cycle
-        run: echo " First task is running"
+      - name: First cycle
+        run: echo "This first action"
 
