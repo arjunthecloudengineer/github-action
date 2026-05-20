@@ -1,0 +1,20 @@
+name: Hello Arjun
+
+on: workflow_dispatch
+
+jobs:
+  
+  build:
+   
+    runs-on: ubuntu-latest
+
+    
+    steps:
+    
+      - name: Hello step
+        run: echo "This is test for github action"
+      
+      - name: Run a multi-line script
+        run: |
+          echo "Welcome to GHA",
+          echo "this is another line"
