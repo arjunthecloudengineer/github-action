@@ -1,7 +1,7 @@
 name: Env Demo
 on: workflow_dispatch
 env:
-  APP_ENV:"Dev"
+  APP_ENV: "Dev"
 jobs:
   env-demo:
     runs-on: ubuntu-latest
