@@ -9,9 +9,9 @@ jobs:
     steps:
       - name: step one
         id: step1
-        run: echo "first try" >> $GITHUB.OUTPUT
+        run: echo "versionoir = 0.0.1" >> $GITHUB.OUTPUT
       - name: step two
-        run: echo "This version is ${{ steps.step1.outputs.version }}"
+        run: echo "This version is ${{ steps.step1.outputs.versionoir }}"
 
 
   
