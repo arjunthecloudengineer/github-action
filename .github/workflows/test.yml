@@ -9,6 +9,11 @@ jobs:
     steps:
       - name: Checkout Repository
         run: echo "actions/checkout@v4"
+
+      - name: Print all cariable under GitHub
+        run: echo "${{ toJson (gitbub.actor)}}"
+        
+        
       
       
 
