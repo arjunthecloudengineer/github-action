@@ -1,7 +1,7 @@
 name: Morning Output demo
 on: push
 
-  This-is-first-job:
+  Job1:
     run-on: ubuntu-latest
 
     steps:
