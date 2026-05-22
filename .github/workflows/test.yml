@@ -1,13 +1,14 @@
-name: Env Demo
+name: Deploy Website
 on: workflow_dispatch
-env:
-  APP_ENV: "Devata"
+
 jobs:
-  env-demo:
+  deploy:
+    name: Deploy Static website on AWS
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Connecting to Env
-        run: echo "App is connecting to $APP_ENV"
+      - name: Checkout Repository
+        run: echo "actions/checkout@v4"
       
       
 
