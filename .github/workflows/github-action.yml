@@ -14,8 +14,8 @@ jobs:
       - name: First step
         run: echo "This is test for github action"
 
-      - name: Verify AWS identity
-        run: aws sts get-caller-identity
+      - name: Checkout repository
+        uses: actions/checkout@v4
       
       - name: Deployment Complete
         run: |
