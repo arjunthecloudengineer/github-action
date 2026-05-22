@@ -1,8 +1,8 @@
 name: Arjun context variable demo
 on: push
 jobs:
-  demo:
-    name: demo of the context
+  context-demo:
+    name: demo of the context is happening
     runs-on: ubuntu-latest
     steps:
       - name: Use context variables
