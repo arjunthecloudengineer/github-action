@@ -1,0 +1,9 @@
+name: Arjun context variable demo
+on: push
+jobs:
+  demo:
+    name: demo of the context
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use context variables
+        run: echo "this workflow is triggered by {{ github.actor}} "
