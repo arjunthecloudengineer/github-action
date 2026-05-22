@@ -14,7 +14,7 @@ jobs:
       - name: First step
         run: echo "This is test for github action"
       
-      - name: Second Step
+      - name: Deployment Complete
         run: |
-          echo "this is for multi steps"
-          echo "this is another line"
+          echo "CloudPipe website deployed successfully."
+          echo "this is end"
