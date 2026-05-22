@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       
-      - name: Deployment Complete
+      - name: Deployment Completed
         run: |
           echo "CloudPipe website deployed successfully."
           echo "this is end"
