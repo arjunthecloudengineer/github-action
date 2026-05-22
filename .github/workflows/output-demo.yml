@@ -2,11 +2,17 @@ name: Morning Output demo
 on: push
 
 jobs:
-  my_first_job:
-  name: My first job
-  my_second_job:
-  name: My second job
+  example_job:
+    name: generate_output
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: step one
+        id: step1
+        run: echo "first try" >> $GITHUB.OUTPUT
+      - name: step two
+        run: echo "This version is ${{ steps.step1.outputs.version }}"
+
+
   
-  steps:
-    - name: step One
-      run: echo "version = 0.0.1 >>$GitHub_Output
+        
