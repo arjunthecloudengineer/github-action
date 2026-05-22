@@ -1,9 +1,12 @@
 name: Morning Output demo
 on: push
 
-  Job1:
-    run-on: ubuntu-latest
-
-    steps:
-      - name: step One
-        run: echo "version = 0.0.1 >>$GitHub_Output
+jobs:
+  my_first_job:
+  name: My first job
+  my_second_job:
+  name: My second job
+  
+  steps:
+    - name: step One
+      run: echo "version = 0.0.1 >>$GitHub_Output
