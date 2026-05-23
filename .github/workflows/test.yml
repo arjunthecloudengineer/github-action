@@ -4,17 +4,38 @@ on:
     branches: 
       - main
       - develop
-      - future/*
+      - future/**
 
 jobs:
   quality-check:
     if: ${{ github.ref == 'refs/heads/main' }}
-    runs-on: ubuntu-latest
-    
+    if startswith (github.ref_name, "feature") && github.event_name == 'push' 
+    runs on: Ubuntu-latest
     steps:
-      - name: runs for Arjun
-        run: echo "Deploying to production server on branch $GITHUB_REF"
-        
+      - name: Perform code quality
+        run: |
+          echo "Performing quality check $GITHUB_REF"
+          echo "Performing quality check only"
+          
+  dev-deploy:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    if github.ref_name == 'develop' && github.event_name == 'push'  
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dev Deploy
+        run: |
+          echo "Deploying to the Dev enviornment"
+          echo "Performing quality check only"
+
+  prod-deploy:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    if github.ref_name == 'production' && github.event_name == 'push'  
+  
+    steps:
+      - name: Prod Deploy
+        run: |
+          echo "Deploy to the Prod enviornment"
+          echo "Performing quality check only on the produciton"
         
         
       
