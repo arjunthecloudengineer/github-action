@@ -1,0 +1,11 @@
+name: Or Condition
+on: push
+
+jobs:
+  Arko test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: runs for Arjun
+        if: ${{ github.actor == 'arjunthecloudengineer' }}
+        run: echo "Deploying to production server on branch $GITHUB_Actor"
