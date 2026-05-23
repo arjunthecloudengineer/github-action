@@ -15,9 +15,8 @@ jobs:
         id: step3
         run: echo "firstworld=hello" >> $GITHUB_OUTPUT
       - name: secondworld
-        id: secondworld
         run: echo "${{ steps.step3.outputs.firstworld }}"
-
+        
 
   
         
