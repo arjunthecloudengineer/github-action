@@ -3,6 +3,10 @@ on: push
 
 jobs:
   build:
+    name: prints the outputs:
+    outputs:
+    output1: ${{ steps.step1.outputs.versionoir }}
+      
     runs-on: ubuntu-latest
 
     steps:
@@ -16,6 +20,12 @@ jobs:
         run: echo "firstworld=hello" >> $GITHUB_OUTPUT
       - name: secondworld
         run: echo "${{ steps.step3.outputs.firstworld }}"
+      deploy:
+        name: prints the deploy
+
+        
+    
+      
         
 
   
