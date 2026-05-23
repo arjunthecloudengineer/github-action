@@ -6,9 +6,9 @@ jobs:
   My_build:
     name: deploy to staging
     runs-on: ubuntu-latest
-steps:
- run-name: connect
- run: echo "you aare doing fine"
+  steps:
+   run-name: connect
+   run: echo "you aare doing fine"
 
     
     
