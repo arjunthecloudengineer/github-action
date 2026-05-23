@@ -11,6 +11,12 @@ jobs:
         run: echo "versionoir=0.0.1" >> $GITHUB_OUTPUT
       - name: step two
         run: echo "This version is ${{ steps.step1.outputs.versionoir }}"
+      - name: firstworld
+        id: firstworld
+        run: echo "firstworld=hello" >> $GITHUB_OUTPUT
+      - name: secondworld
+        id: secondworld
+        run: echo "${{ steps.firstworld.outputs.firstworld }}"
 
 
   
