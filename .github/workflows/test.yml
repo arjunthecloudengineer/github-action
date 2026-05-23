@@ -1,15 +1,15 @@
-name: Deploy Website
+name: CI
 on: push
 
 jobs:
   deploy:
-    name: isla-arjun
+    name: prod-check
     runs-on: ubuntu-latest
     
     steps:
       - name: runs for Arjun
-        if: github.actor
-        run: echo "actions/checkout@v4"
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: echo "Deploying to production server on branch $GITHUB_REF"
         
         
         
