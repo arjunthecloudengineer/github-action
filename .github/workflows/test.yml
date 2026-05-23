@@ -3,11 +3,11 @@ on: push
 
 jobs:
   product-check:
+    if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     
     steps:
       - name: runs for Arjun
-        if: ${{ github.ref == 'refs/heads/main' }}
         run: echo "Deploying to production server on branch $GITHUB_REF"
         
         
