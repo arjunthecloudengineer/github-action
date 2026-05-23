@@ -2,7 +2,7 @@ name: Morning Output demo
 on: push
 
 jobs:
-  example_job1:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -12,11 +12,11 @@ jobs:
       - name: step two
         run: echo "This version is ${{ steps.step1.outputs.versionoir }}"
       - name: firstworld
-        id: firstworld
+        id: step3
         run: echo "firstworld=hello" >> $GITHUB_OUTPUT
       - name: secondworld
         id: secondworld
-        run: echo "${{ steps.firstworld.outputs.firstworld }}"
+        run: echo "${{ steps.step3.outputs.firstworld }}"
 
 
   
