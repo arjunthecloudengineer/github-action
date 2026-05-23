@@ -7,5 +7,5 @@ jobs:
     
     steps:
       - name: runs for Arjun
-        if: ${{ github.actor == 'arjunthecloudengineer' }}
-        run: echo "Deploying to production server on branch $GITHUB_Actor"
+        if: github.actor == 'arjunthecloudengineer'
+        run: echo "it is also triggered by Arjunthecloudengineer"
