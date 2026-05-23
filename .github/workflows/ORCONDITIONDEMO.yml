@@ -1,0 +1,11 @@
+name: Or Condition demo
+on: push
+
+jobs:
+  Arko test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: runs for Arjun
+        if: github.actor == 'arjunthecloudengineer'
+        run: echo "it is also triggered by Arjunthecloudengineer"
