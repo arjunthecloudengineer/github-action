@@ -3,7 +3,6 @@ on: push
 
 jobs:
   deploy:
-    name: prod-check
     runs-on: ubuntu-latest
     
     steps:
