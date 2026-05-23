@@ -1,0 +1,15 @@
+name: build  Deploy
+on:
+  pull_request: 
+  branches:
+    - main
+    - release/*
+jobs:
+  build:
+    name: deploy to staging
+    runs-on: ubuntu-latest
+  steps:
+    - name: Built step
+      run: echo "Building the application"
+     
+  
