@@ -3,7 +3,7 @@ on: push
 
 jobs:
   build:
-    name: prints the outputs:
+    name: prints the outputs
     outputs:
     output1: ${{ steps.step1.outputs.versionoir }}
       
