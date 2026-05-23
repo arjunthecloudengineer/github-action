@@ -5,7 +5,7 @@ jobs:
   build:
     name: prints the outputs
     outputs:
-    output1: ${{ steps.step1.outputs.versionoir }}
+      outputs: ${{ steps.step1.outputs.versionoir }}
       
     runs-on: ubuntu-latest
 
@@ -13,11 +13,14 @@ jobs:
       - name: step one
         id: step1
         run: echo "versionoir=0.0.1" >> $GITHUB_OUTPUT
+        
       - name: step two
         run: echo "This version is ${{ steps.step1.outputs.versionoir }}"
+        
       - name: firstworld
         id: step3
         run: echo "firstworld=hello" >> $GITHUB_OUTPUT
+        
       - name: secondworld
         run: echo "${{ steps.step3.outputs.firstworld }}"
        
