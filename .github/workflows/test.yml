@@ -1,17 +1,15 @@
 name: Deploy Website
-on: workflow_dispatch
+on: push
 
 jobs:
   deploy:
-    name: Deploy Static website on AWS
+    name: demo
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout Repository
+      - name: runs for Arjun
+        if: github.actor
         run: echo "actions/checkout@v4"
-
-      - name: Print all cariable under GitHub
-        run: echo "${{ toJson (gitbub )}}"
         
         
         
