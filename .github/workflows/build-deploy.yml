@@ -1,15 +1,15 @@
 name: build  Deploy
 on:
-  pull_request: 
-  branches:
-    - main
-    - release/*
+ workflow_dispatch: 
+ 
 jobs:
-  build:
+  My_build:
     name: deploy to staging
     runs-on: ubuntu-latest
-  steps:
-    - name: Built step
-      run: echo "Building the application"
-     
+steps:
+ run-name: connect
+ run: echo "you aare doing fine"
+
+    
+    
   
