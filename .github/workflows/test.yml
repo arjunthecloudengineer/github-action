@@ -1,9 +1,9 @@
-name: Deploy Website isla.
+name: Deploy Website
 on: push
 
 jobs:
   deploy:
-    name: demo
+    name: isla-arjun
     runs-on: ubuntu-latest
     
     steps:
