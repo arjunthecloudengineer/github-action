@@ -1,4 +1,11 @@
-name: Inputs Demo
-on: 
-  workflow_dispatch:
-  jobs:
+name: My github action workflow
+on: [push]
+
+jobs:
+  testing_github:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello
+        run: echo "Hello, Github Actions"
+      - name: Display repo name
+        run: echo "this workflow is running in ${{github.repository}}
